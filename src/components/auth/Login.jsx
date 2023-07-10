@@ -2,6 +2,8 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import LoginForm from "./LoginForm";
 
+export const revalidate = 0;
+
 export default async function Login() {
   const supabase = createServerComponentClient({ cookies })
 

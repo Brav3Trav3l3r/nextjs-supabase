@@ -41,7 +41,7 @@ export default function LoginForm({ session }) {
       logout
     </button>
   ) : (
-    <div>
+    <div className="">
       <button className="btn btn-sm" onClick={() => my_modal_2.showModal()}>
         login
       </button>
