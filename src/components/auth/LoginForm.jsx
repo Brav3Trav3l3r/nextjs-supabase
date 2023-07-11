@@ -31,22 +31,13 @@ export default function LoginForm({ session }) {
     router.refresh();
   };
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.refresh();
-  };
-
-  return session ? (
-    <button onClick={handleLogout} className="btn btn-sm hover:btn-error">
-      logout
-    </button>
-  ) : (
+  return (
     <div className="">
-      <button className="btn btn-sm" onClick={() => my_modal_2.showModal()}>
+      <button className="btn btn-sm " onClick={() => my_modal_2.showModal()}>
         login
       </button>
-      <dialog id="my_modal_2" className="modal ">
-        <form method="dialog" className="modal-box">
+      <dialog id="my_modal_2" className="modal">
+        <form method="dialog" className="modal-box bg-base-200">
           <div className="inputs flex flex-col gap-4">
             <input
               type="email"

@@ -1,7 +1,7 @@
 import Login from "@/components/auth/Login";
-import "./globals.css";
+import "../globals.css";
 import { Inter } from "next/font/google";
-import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Navbar />
+        {/* <Navbar /> */}
+        <Link href="/" className="m-4 absolute z-50 btn btn-base-300">
+          Home
+        </Link>
         {children}
       </body>
     </html>
